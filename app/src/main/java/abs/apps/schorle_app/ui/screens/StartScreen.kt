@@ -4,6 +4,7 @@ package abs.apps.schorle_app.ui.screens
 import abs.apps.schorle_app.R
 import abs.apps.schorle_app.ui.navigation.INavigationDestination
 import android.media.MediaPlayer
+import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -99,24 +100,8 @@ fun PlayQuote() {
         R.raw.walterwhites
     )
 
-    DisposableEffect(Unit) {
         val randomSoundId = sounds[Random.nextInt(sounds.size)]
-        val mediaPlayer = MediaPlayer.create(context, randomSoundId).apply {
-            setOnCompletionListener { it.release() }
-            setOnErrorListener { mp, what, extra ->
-                mp.release()
-                true // Return true if the error was handled
-            }
-        }
-
+        val mediaPlayer = MediaPlayer.create(context, randomSoundId)
         mediaPlayer.start()
-
-        onDispose {
-            if (mediaPlayer.isPlaying) {
-                mediaPlayer.stop()
-            }
-            mediaPlayer.release()
-        }
-    }
 }
 
