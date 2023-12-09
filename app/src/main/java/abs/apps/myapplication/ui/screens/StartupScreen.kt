@@ -6,6 +6,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -33,7 +34,7 @@ fun StartupScreen(navigateToStartScreen: () -> Unit) {
         navigateToStartScreen()
     }
     Scaffold(topBar = {
-        TopAppBar(
+        CenterAlignedTopAppBar(
             title = {Text(stringResource(R.string.startup))},
         )
     }

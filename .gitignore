@@ -9,6 +9,7 @@ local.properties
 # Log/OS Files
 *.log
 app/src/main/res/drawable/schorlestartup.jpg
+app/src/main/res/raw/
 
 # Android Studio generated files and folders
 captures/
