@@ -4,11 +4,11 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "schorle_event")
+@Entity(tableName = "schorleEvent")
 data class SchorleEvent(
     @ColumnInfo(name = "name")
     var name: String,
-    @ColumnInfo(name = "timestamp")
+    @ColumnInfo(name = "dateTimestamp")
     var dateTimestamp: Long,
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
