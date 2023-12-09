@@ -1,5 +1,6 @@
 package abs.apps.myapplication.ui.navigation
 
+import abs.apps.myapplication.ui.screens.StartupDestination
 import android.annotation.SuppressLint
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -18,10 +19,9 @@ fun SchorleNavHost(
     navController: NavHostController,
     modifier: Modifier = Modifier,
 ) {
-/*
-    NavHost(
-        navController = navController,
-        startDestination = StartupDestination.route,
-        modifier = modifier
-*/
+//    NavHost(
+//        navController = navController,
+//        startDestination = StartupDestination.route,
+//        modifier = modifier
+//    )
 }
