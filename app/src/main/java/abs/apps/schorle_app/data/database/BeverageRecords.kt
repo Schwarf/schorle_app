@@ -10,10 +10,10 @@ import androidx.room.PrimaryKey
     tableName = "participants",
     foreignKeys = [
         ForeignKey(
-        entity = Participants::class,
-        parentColumns = ["id"],
-        childColumns = ["participantId"],
-        onDelete = ForeignKey.CASCADE
+            entity = Participants::class,
+            parentColumns = ["id"],
+            childColumns = ["participantId"],
+            onDelete = ForeignKey.CASCADE
         ),
         ForeignKey(
             entity = Event::class,
@@ -21,14 +21,25 @@ import androidx.room.PrimaryKey
             childColumns = ["eventId"],
             onDelete = ForeignKey.CASCADE
         ),
-                ],
-    indices = [Index(value = ["participantId", "eventId"])]
+        ForeignKey(
+            entity = Beverages::class,
+            parentColumns = ["id"],
+            childColumns = ["beverageId"],
+            onDelete = ForeignKey.CASCADE
+        ),
+
+    ],
+    indices = [Index(value = ["participantId", "eventId", "beverageId"])]
 )
-data class EventRecords(
+
+data class BeverageRecords(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     @ColumnInfo(name = "participantId")
     val participantId: Int,
     @ColumnInfo(name = "eventId")
     val eventId: Int,
-)
+    @ColumnInfo(name = "beverageId")
+    val beverageId: Int,
+    )
+

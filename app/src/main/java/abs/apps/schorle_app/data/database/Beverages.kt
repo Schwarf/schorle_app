@@ -4,12 +4,10 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "schorleEvent")
-data class SchorleEvent(
+@Entity(tableName = "beverages")
+data class Beverages(
     @ColumnInfo(name = "name")
     var name: String,
-    @ColumnInfo(name = "dateTimestamp")
-    var dateTimestamp: Long,
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
 )
