@@ -1,4 +1,4 @@
-package abs.apps.myapplication.ui.theme
+package abs.apps.schorle_app.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

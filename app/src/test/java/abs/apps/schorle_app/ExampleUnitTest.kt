@@ -1,4 +1,4 @@
-package abs.apps.myapplication
+package abs.apps.schorle_app
 
 import org.junit.Test
 

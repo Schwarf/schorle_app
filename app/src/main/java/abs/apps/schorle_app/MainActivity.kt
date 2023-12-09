@@ -1,6 +1,6 @@
-package abs.apps.myapplication
+package abs.apps.schorle_app
 
-import abs.apps.myapplication.ui.navigation.SchorleNavigation
+import abs.apps.schorle_app.ui.navigation.SchorleNavigation
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import abs.apps.myapplication.ui.theme.SchorleAppTheme
+import abs.apps.schorle_app.ui.theme.SchorleAppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

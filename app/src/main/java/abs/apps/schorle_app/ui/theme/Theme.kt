@@ -1,4 +1,4 @@
-package abs.apps.myapplication.ui.theme
+package abs.apps.schorle_app.ui.theme
 
 import android.app.Activity
 import android.os.Build

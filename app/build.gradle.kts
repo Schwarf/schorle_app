@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "abs.apps.myapplication"
+    namespace = "abs.apps.schorle_app"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "abs.apps.myapplication"
+        applicationId = "abs.apps.schorle_app"
         minSdk = 26
         targetSdk = 34
         versionCode = 1

@@ -1,9 +1,9 @@
-package abs.apps.myapplication.ui.navigation
+package abs.apps.schorle_app.ui.navigation
 
-import abs.apps.myapplication.ui.screens.StartDestination
-import abs.apps.myapplication.ui.screens.StartScreen
-import abs.apps.myapplication.ui.screens.StartupDestination
-import abs.apps.myapplication.ui.screens.StartupScreen
+import abs.apps.schorle_app.ui.screens.StartDestination
+import abs.apps.schorle_app.ui.screens.StartScreen
+import abs.apps.schorle_app.ui.screens.StartupDestination
+import abs.apps.schorle_app.ui.screens.StartupScreen
 import android.annotation.SuppressLint
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -35,7 +35,7 @@ fun SchorleNavHost(
 
         composable(route = StartDestination.route)
         {
-            StartScreen(playQuote = {}, navigateToSchorleCounter = {}, navigateToBagageTracking = {})
+            StartScreen(navigateToSchorleCounter = {}, navigateToBagageTracking = {})
         }
     }
 }
