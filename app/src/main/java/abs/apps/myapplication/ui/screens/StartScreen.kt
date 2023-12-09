@@ -29,9 +29,9 @@ object StartDestination : INavigationDestination {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun StartScreen(
-    navigateToWorkouts: () -> Unit,
-    navigateToTrainings: () -> Unit,
-    navigateToSynchronization: () -> Unit
+    playQuote: () -> Unit,
+    navigateToSchorleCounter: () -> Unit,
+    navigateToBagageTracking: () -> Unit
 ) {
     Scaffold()
     { padding ->
@@ -43,12 +43,12 @@ fun StartScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         )
         {
-            LargeTileButton(text = "Play random quote", onClick = navigateToWorkouts)
+            LargeTileButton(text = "Zufall Zitat", onClick = playQuote)
             Spacer(modifier = Modifier.height(16.dp))
-            LargeTileButton(text = "Go to Schorle counter", onClick = navigateToTrainings)
+            LargeTileButton(text = "D'Schorle Zähler", onClick = navigateToSchorleCounter)
             Spacer(modifier = Modifier.height(16.dp))
-            LargeTileButton(text = "Add new Schorlinski",
-                onClick = navigateToSynchronization
+            LargeTileButton(text = "Bring en neie Schorlinski zu de Bagage",
+                onClick = navigateToBagageTracking
             )
         }
 
