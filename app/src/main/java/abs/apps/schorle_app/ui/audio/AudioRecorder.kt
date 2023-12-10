@@ -1,12 +1,13 @@
 package abs.apps.schorle_app.ui.audio
 
+import abs.apps.schorle_app.data.files.IFileRepository
 import android.content.Context
 import android.media.MediaRecorder
 import android.os.Build
 import java.io.File
 import java.io.FileOutputStream
 
-class AudioRecorder(private val context: Context) : IAudioRecorder {
+class AudioRecorder(private val applicationContext: Context, private val fileRepository: IFileRepository) : IAudioRecorder {
 
     private var recorder : MediaRecorder? = null
 
@@ -19,6 +20,7 @@ class AudioRecorder(private val context: Context) : IAudioRecorder {
     }
     override fun start(outputFile : File)
     {
+
         createRecorder().apply {
             setAudioSource(MediaRecorder.AudioSource.MIC)
             setOutputFormat(MediaRecorder.OutputFormat.MPEG_4)
