@@ -12,20 +12,14 @@ class AudioScreenViewModel(
 ) : ViewModel() {
 
     fun startRecording(fileName: String) {
-        val file = repository.getFile(fileName)
-        recorder.start(file);
+        recorder.start(repository.getFile(fileName));
     }
 
     fun stopRecording() {
         recorder.stop();
     }
 
-    fun saveRecordingAs(name: String) {
-        recorder.stop();
-    }
-
-
-    fun playRecord() {
-
+    fun playRecord(fileName: String) {
+        player.play(repository.getFile(fileName))
     }
 }
