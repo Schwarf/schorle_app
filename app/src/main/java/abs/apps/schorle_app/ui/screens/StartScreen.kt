@@ -4,6 +4,7 @@ package abs.apps.schorle_app.ui.screens
 import abs.apps.schorle_app.R
 import abs.apps.schorle_app.ui.navigation.INavigationDestination
 import android.media.MediaPlayer
+import android.media.MediaRecorder
 import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -40,14 +41,14 @@ object StartDestination : INavigationDestination {
 @Composable
 fun StartScreen(
     navigateToSchorleCounter: () -> Unit,
-    navigateToBagageTracking: () -> Unit
+    navigateToBagageTracking: () -> Unit,
 ) {
     var playSound by remember { mutableStateOf(false) }
-
     if (playSound) {
         PlayQuote()
         playSound = false // Reset the state
     }
+
 
     Scaffold()
     { padding ->
